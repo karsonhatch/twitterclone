@@ -1,11 +1,14 @@
 Rails.application.routes.draw do
-  root 'landing#show'
+
+  get 'dashboard/index'
+
+root 'landing#show'
 
 
 # devise
 devise_for :users, controllers: {
-        sessions: 'users/registrations'
-      }
+  registrations: 'users/registrations'
+}
 
 # Resource Routes
 
